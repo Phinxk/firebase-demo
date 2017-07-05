@@ -122,7 +122,16 @@
         if (!isTokenSentToServer()) {
           console.log('Sending token to server...');
           console.log(messaging);
-          // messaging.registrationToUse_.pushManager.subscribe({userVisibleOnly: true})
+          $.ajax({
+            type: "POST",
+            url: "{% url 'main:register_device' %}",
+            data: {
+              'token': currentToken // from form
+            },
+            success: function(){
+              console.log('Token set in server :D');
+            }
+          });
           setTokenSentToServer(true);
         } else {
           console.log('Token already sent to server so won\'t send it again ' +
@@ -169,6 +178,18 @@
           messaging.deleteToken(currentToken)
           .then(function() {
             console.log('Token deleted.');
+            $.ajax({
+              type: "POST",
+              url: "{% url 'main:delete_device' %}",
+              data: {
+                'token': currentToken // from form
+              },
+              success: function(){
+                console.log('Token set in server :D');
+              }
+            });
+
+
             setTokenSentToServer(false);
             // [START_EXCLUDE]
             // Once token is deleted update UI.

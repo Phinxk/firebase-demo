@@ -128,3 +128,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+# Firebase
+
+FIREBASE_TOKEN = 'AAAAOA7jKmg:APA91bEj1rcsr02jEVQVBpQBmCIlLGfQjMEBDYt0oy1OF-e4hDXO2bEKYTj-T9b7xvfdZ6hi81o5vx1GQZXaiksgUfh6XlJeszhrNpWxqWaLyinF2eRRPNR2yyPl8zphV2SOGuyLXThh'
