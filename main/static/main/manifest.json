@@ -1,0 +1,11 @@
+{
+  "short_name": "fire",
+  "name": "Firebase Cloud Message demo.",
+  "icons": [
+  ],
+  "permissions": [
+    "gcm", "storage"
+  ],
+  "start_url": "",
+  "gcm_sender_id": "103953800507"
+}
